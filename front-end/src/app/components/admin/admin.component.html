@@ -1,0 +1,18 @@
+<h1>Bienvenido Administrador</h1>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <button class="btn btn-dark" [routerLink]="['/admin/new']" routerLinkActive="router-link-active" >Agregar nueva fotografia</button>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-success" [routerLink]="['/admin/list']" routerLinkActive="router-link-active" >Mostrar lista</button>
+        </div>
+        <div class="col-4">
+            <button class="btn btn-danger" (click)="logout()">Cerrar sesion</button>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,40 @@
+<h3>Editar Fotografia</h3>
+<form class="row" #editarFotoForm="ngForm" (ngSubmit)="editar()">
+    <mat-form-field class="col-12">
+        <input matInput type="text" #nombre="ngModel" name="nombre" [(ngModel)]="fotografia.fotografia" required
+            placeholder="fotografia" autofocus>
+        <mat-error *ngIf="nombre.invalid">El nombre de la fotografia es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-12">
+        <input matInput type="text" #descripcion="ngModel" name="descripcion" [(ngModel)]="fotografia.descripcion"
+            placeholder="descripcion" autofocus>
+    </mat-form-field>
+
+    <mat-form-field class="col-12">
+        <input matInput type="text" #autor="ngModel" name="autor" [(ngModel)]="fotografia.autor" required
+            placeholder="autor" autofocus>
+        <mat-error *ngIf="autor.invalid">El autor de la fotografia es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-12">
+        <input matInput type="number" #numero="ngModel" name="numero" [(ngModel)]="fotografia.numero" required
+            placeholder="numero" autofocus>
+        <mat-error *ngIf="numero.invalid">El numero de la fotografia es requerido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-12">
+        <input matInput type="text" disabled>
+        <input #file type="file" style="display: none;" (change)="fileChangeEvent($event)">
+        <div>{{image_selected}}</div>
+        <button mat-mini-fab color="primary" matSuffix type="button" (click)="file.click()">
+            <mat-icon>attach_file</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-checkbox class="col-12" color="primary" name="activo" [(ngModel)]="fotografia.activo">Activo</mat-checkbox>
+    <button class="col-6" [routerLink]="['/admin']" mat-raised-button class="btn" color="default"
+        type="button">cancelar</button>
+    <button class="col-6" [disabled]="!editarFotoForm.form.valid" mat-raised-button class="btn" color="primary"
+        type="submit">Actualizar</button>
+</form>

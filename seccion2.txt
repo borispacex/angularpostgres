@@ -1,0 +1,11 @@
+1. Instalamos paquete angular/cli
+    'npm install -g @angular/cli'
+2. Creamos el proyecto angular cli
+    'ng new front-end'
+3. Ahora trabajamos en el front-end
+4. Ahora agremos dependencias
+    'npm install --save @angular/material @angular/cdk'
+5. Configuramos angular/material en app.module.ts
+
+6. Intalamos paquete de bootstrap
+    '$ npm install --save bootstrap jquery' (por mi parte)

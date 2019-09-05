@@ -1,0 +1,42 @@
+1 vamos a carpeta back-end
+2 crear carpeta bin
+3 crear carpeta server
+4 vamos a back-end 'npm init'
+5 instalamos 2 dependencias (express y body-parser)
+    'npm install express body-parser --save'
+6 creamos una archivo 'app.js'
+    Escribimos un poco de codigo
+7 instalamos dependencia para el reinicio
+    'npm install nodemon --save-dev'
+8 agregamos un codigo en scripts de package.json (para nodemon)
+9 Instalamos dependencias
+    'npm install sequelize-cli -g'
+    'npm install sequelize --save'
+    'npm install pg pg-hstore --save'
+10 vamos a la carpeta server
+    'sequelize init'
+11 VAMOS EMPEZANDO CREANDO
+    1. Creamos un modelo en models/usuarios.js
+    2. Creamos carpeta server/controllers y archivo usuarios.js y index.js
+    NOTA:
+        Cada vez que creemos un modelo debemos indexarlo en controllers/index.js 
+    3. Creamos una carpeta server/routes, y usuarios.js
+
+12. VAMOS A CREAR TOKEN (Json Web Tokens)
+    1. Instalmos el paquete en back-end
+        'npm install njwt --save'
+    2. Creamos una carpeta dentro de server/services y archivo jwt.js
+    3. Editamos el jwt.js para crear el token con login
+    4. Creamos una carpeta dentro de server/authenticated y archivo authenticated.js
+    5. Ahora para el password y la codificacion editamos en models/usuarios.js
+        'npm install njwt --save'
+13. Vamos a crear el modelo fotografias
+    1. crear funcion create
+    2. crear funcion update
+14. Vamos guardar imagenes
+    1. instalar paquete necesario
+        'npm install connect-multiparty --save'
+15. Para guardar imagenes de poca resolucion
+    1. instalar el paquete
+        'npm install node-thumbnail --save'
+    2. Creamos la carpeta /server/uploads/fotografias/thumbs
